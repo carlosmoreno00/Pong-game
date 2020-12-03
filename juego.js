@@ -18,8 +18,8 @@ class bola {
     mover(jugador1, jugador2){
         var tamanoSVG = document.getElementsByTagName("svg")[0].getBoundingClientRect();
         if (this.x + this.vX - this.radio < 0 || this.x + this.vX + this.radio > tamanoSVG.width) {
-            this.pelota.setAttributeNS(null, "cx", tamanoSVG.width/2);
-            this.pelota.setAttributeNS(null, "cy", tamanoSVG.height/2);
+            this.x = tamanoSVG.width/2;
+            this.y = tamanoSVG.height/2;
         }
         if (this.y + this.vY - this.radio < 0 || this.y + this.vY + this.radio > tamanoSVG.height) {
             this.vY *= -1;
